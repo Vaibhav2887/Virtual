@@ -1,5 +1,5 @@
 /*
- *     <--- Shocave --->
+ *     <--- Doodle --->
  *    A virtual Assistant
  */
 
@@ -37,7 +37,7 @@ function wishMe() {
 window.addEventListener("load", () => {
   speak("Hi..");
   speak(
-    "I'm a virtual assistant. My name is Doodle. I'm developed by Vaibhav Khurana"
+    "I'm a virtual assistant. My name is Doodle. I'm developed by Team codeX"
   );
   wishMe("");
 });
@@ -60,7 +60,7 @@ btn.addEventListener("click", () => {
 function speakThis(message) {
   const speech = new SpeechSynthesisUtterance();
 
-  speech.text = "I did not understand what you said please try again";
+  speech.text = "I did not understand what you said please tr again";
 
   if (message.includes("hi") || message.includes("hello")) {
     const finalText = "Hello. How can I help";
@@ -70,11 +70,11 @@ function speakThis(message) {
     speech.text = finalText;
   } else if (message.includes("introduce yourself")) {
     const finalText =
-      "I'm a virtual assistant. My name is Doodle. I'm developed by Vaibhav Khurana. I can help you that you want. Still, I'm under devloping. I think, I'll be more powerful with Md shohanur rahman. Thank You";
+      "  I'm a virtual assistant. My name is Doodle. I'm developed by Team CodeX. I can help you that you want. Still, I'm under devloping. I think, I'll be more powerful with Team CodeX. Thank You";
     speech.text = finalText;
   } else if (message.includes("how old are you")) {
     const finalText =
-      "As I'm a virtual assistant, I've no age. But, i can say that I've started my journey from 14th april, 2022";
+      "As I'm a virtual assistant, I've no age. But, i can say that I've started my journey from 22 jan, 2024";
     speech.text = finalText;
   } else if (
     message.includes("what are you doing now") ||
@@ -91,7 +91,7 @@ function speakThis(message) {
     message.includes("who developed you") ||
     message.includes("who build you")
   ) {
-    const finalText = "I'm developed by Vaibhav Khurana. Let see his profile";
+    const finalText = "I'm developed by Team CodeX.";
     // window.open("https://github.com/shohan3401", "_blank");
     speech.text = finalText;
   } else if (message.includes("can you help me")) {
@@ -101,7 +101,7 @@ function speakThis(message) {
   } else if (message.includes("who are you")) {
     const finalText = "Hey!! I'm Doodle. I'm your personal virtual assistant.";
     speech.text = finalText;
-  } else if (message.includes("how can you help me")) {
+  } else if (message.includes("in what ways you can help me")) {
     const finalText = "It's cool. I can help you in many ways.";
     speech.text = finalText;
   } else if (
@@ -137,21 +137,21 @@ function speakThis(message) {
     );
     const finalText = "This is what i found on wikipedia regarding " + message;
     speech.text = finalText;
-  } else if (message.includes("time")) {
+  } else if (message.includes("current time")) {
     const time = new Date().toLocaleString(undefined, {
       hour: "numeric",
       minute: "numeric",
     });
     const finalText = time;
     speech.text = finalText;
-  } else if (message.includes("date")) {
+  } else if (message.includes("today's date")) {
     const date = new Date().toLocaleString(undefined, {
       month: "short",
       day: "numeric",
     });
     const finalText = date;
     speech.text = finalText;
-  } else if (message.includes("calculator")) {
+  } else if (message.includes("open calculator")) {
     window.open("Calculator:///");
     const finalText = "Opening Calculator";
     speech.text = finalText;
